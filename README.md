@@ -1,4 +1,1 @@
-- 👋 Hi, I’m @sp41414.
-- 🌱 I’m currently learning C++ and Python.
-- 💞️ I’m looking to collaborate on anything.
-- ⚡ Fun fact: Humans breath through their noses.
+i'll bother with readme.md later
