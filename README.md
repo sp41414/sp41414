@@ -7,9 +7,5 @@
 </div>
 
 <div align="center">
-<img src="https://streak-stats.demolab.com/?user=sp41414&theme=dark" />
-</div>
-
-<div align="center">
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=sp41414&theme=github-compact" />
 </div>
