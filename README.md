@@ -9,3 +9,8 @@
 <div align="center">
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=sp41414&theme=github-compact" />
 </div>
+
+<div align="center">
+<h2>(Currently) learning:</h2>
+<img src="https://skillicons.dev/icons?i=ts,react&perline=10">
+</div>
