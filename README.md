@@ -12,5 +12,5 @@
 
 <div align="center">
 <h2>(Currently) learning:</h2>
-<img src="https://skillicons.dev/icons?i=js,react&perline=10">
+<img src="https://skillicons.dev/icons?i=js,nodejs,postgresql,expressjs&perline=10">
 </div>
