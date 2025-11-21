@@ -11,6 +11,6 @@
 </div>
 
 <div align="center">
-<h2>(Currently) learning:</h2>
-<img src="https://skillicons.dev/icons?i=js,nodejs,postgresql,expressjs&perline=10">
+<h2>Currently learning:</h2>
+<img src="https://skillicons.dev/icons?i=js,nodejs,prisma,expressjs&perline=10">
 </div>
