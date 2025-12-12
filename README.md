@@ -8,4 +8,4 @@ I'm currently a Full-stack Web Developer
 <sub style="opacity: 0.5;">btw html and css look like matching pairs</sub>
 
 ## Portfolio
-> Working on it...
+<a href="https://hsn-portfolio.pages.dev/">Link to portfolio</a>
