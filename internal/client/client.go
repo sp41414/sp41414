@@ -40,9 +40,11 @@ func (c *Client) FetchRepos() ([]*github.Repository, error) {
 	var allRepos []*github.Repository
 	opts := &github.RepositoryListByAuthenticatedUserOptions{
 		ListOptions: github.ListOptions{PerPage: 100},
+		Visibility:  "public",
 		Affiliation: "owner",
 		Sort:        "updated",
 	}
+
 	iter := c.Client.Repositories.ListByAuthenticatedUserIter(c.context, opts)
 	for repo, err := range iter {
 		if err != nil {
