@@ -3,6 +3,7 @@ package stats
 import (
 	"fmt"
 	"os"
+	"sync"
 
 	"github.com/sp41414/sp41414/internal/client"
 	"github.com/sp41414/sp41414/internal/config"
@@ -10,9 +11,10 @@ import (
 )
 
 type GitHubStats struct {
-	Languages  []client.LanguageStats
-	Username   string
-	TotalRepos int
+	Languages     []client.LanguageStats
+	Contributions client.ContributionsStats
+	Username      string
+	TotalRepos    int
 }
 
 type Stats struct {
@@ -51,13 +53,27 @@ func (s *Stats) WriteStats() error {
 		}
 	}
 
-	svgGenerator := generator.NewSVGGenerator(&s.config.Theme, s.config.SvgWidth, s.config.SvgHeight)
+	svgGenerator := generator.NewSVGGenerator(&s.config.Theme, s.config.SvgWidth)
 
-	// make this concurrent when adding more clients
-	languageGenerator := generator.NewLanguagesGenerator(svgGenerator, s.stats.Languages, s.config.GeneratedDir)
-	err := languageGenerator.Generate()
-	if err != nil {
-		return err
+	langGen := generator.NewLanguagesGenerator(svgGenerator, s.stats.Languages, s.config.GeneratedDir)
+	contribGen := generator.NewContributionsGenerator(svgGenerator, s.stats.Contributions, s.config.GeneratedDir)
+
+	var wg sync.WaitGroup
+	errs := make(chan error, 2)
+	wg.Go(func() {
+		errs <- langGen.Generate()
+	})
+	wg.Go(func() {
+		errs <- contribGen.Generate()
+	})
+
+	wg.Wait()
+	close(errs)
+
+	for err := range errs {
+		if err != nil {
+			return err
+		}
 	}
 
 	return nil

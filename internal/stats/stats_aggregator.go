@@ -1,18 +1,22 @@
 package stats
 
 import (
+	"sync"
+
 	"github.com/sp41414/sp41414/internal/client"
 )
 
 type StatsAggregator struct {
-	Client         *client.Client
-	LanguageClient *client.LanguageClient
+	Client              *client.Client
+	LanguageClient      *client.LanguageClient
+	ContributionsClient *client.ContributionsClient
 }
 
 func NewStatsAggregator(c *client.Client) *StatsAggregator {
 	return &StatsAggregator{
-		Client:         c,
-		LanguageClient: client.NewLanguageClient(c),
+		Client:              c,
+		LanguageClient:      client.NewLanguageClient(c),
+		ContributionsClient: client.NewContributionsClient(c),
 	}
 }
 
@@ -22,12 +26,25 @@ func (s *StatsAggregator) FetchStats() (*GitHubStats, error) {
 		return nil, err
 	}
 
-	// make this concurrent when adding more clients
-	languageStats := s.LanguageClient.CalculateLanguageStats(repos)
+	var (
+		wg                sync.WaitGroup
+		languageStats     []client.LanguageStats
+		contributionStats client.ContributionsStats
+	)
+
+	wg.Go(func() {
+		languageStats = s.LanguageClient.CalculateLanguageStats(repos)
+	})
+	wg.Go(func() {
+		contributionStats = s.ContributionsClient.CalculateContributionsStats()
+	})
+
+	wg.Wait()
 
 	return &GitHubStats{
-		Username:   s.Client.Username,
-		Languages:  languageStats,
-		TotalRepos: len(repos),
+		Username:      s.Client.Username,
+		Languages:     languageStats,
+		Contributions: contributionStats,
+		TotalRepos:    len(repos),
 	}, nil
 }

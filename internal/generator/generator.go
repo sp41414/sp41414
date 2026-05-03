@@ -5,19 +5,13 @@ import (
 )
 
 type SVGGenerator struct {
-	theme  *config.Theme
-	width  int
-	height int
+	theme *config.Theme
+	width int
 }
 
-type Generator interface {
-	Generate(svg *SVGGenerator) error
-}
-
-func NewSVGGenerator(theme *config.Theme, width, height int) *SVGGenerator {
+func NewSVGGenerator(theme *config.Theme, width int) *SVGGenerator {
 	return &SVGGenerator{
-		theme:  theme,
-		width:  width,
-		height: height,
+		theme: theme,
+		width: width,
 	}
 }

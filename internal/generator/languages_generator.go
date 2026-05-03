@@ -32,11 +32,12 @@ func (g *LanguagesGenerator) Generate() error {
 	defer f.Close()
 
 	const (
-		padding   = 20
-		barHeight = 8
-		rowHeight = 28
-		dotSize   = 10
-		cornerR   = 12
+		padding     = 20
+		titleHeight = 22
+		barHeight   = 8
+		rowHeight   = 28
+		dotSize     = 10
+		cornerR     = 12
 	)
 
 	langs := g.stats
@@ -47,7 +48,7 @@ func (g *LanguagesGenerator) Generate() error {
 	theme := g.generator.theme
 	width := g.generator.width
 	legendRows := (len(langs) + 1) / 2
-	height := padding + 22 + padding/2 + barHeight + padding + (legendRows * rowHeight) + padding
+	height := padding + titleHeight + padding/2 + barHeight + padding + (legendRows * rowHeight) + padding
 
 	canvas := svg.New(f)
 	canvas.Startraw(fmt.Sprintf(
@@ -61,7 +62,7 @@ func (g *LanguagesGenerator) Generate() error {
 	canvas.Text(padding, padding+14, "Languages",
 		fmt.Sprintf(`font-family="'Segoe UI',sans-serif" font-size="14" font-weight="600" fill="%s"`, theme.Text))
 
-	barY := padding + 22 + padding/2
+	barY := padding + titleHeight + padding/2
 	barWidth := width - padding*2
 	x := padding
 	for _, lang := range langs {

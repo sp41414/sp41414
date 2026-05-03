@@ -1,12 +1,9 @@
 package client
 
 import (
-	"fmt"
-	"log"
 	"slices"
 
 	"github.com/go-enry/go-enry/v2"
-	"github.com/google/go-github/v85/github"
 )
 
 type LanguageClient struct {
@@ -26,27 +23,17 @@ func NewLanguageClient(client *Client) *LanguageClient {
 	}
 }
 
-func (c *LanguageClient) CalculateLanguageStats(repos []*github.Repository) []LanguageStats {
+func (c *LanguageClient) CalculateLanguageStats(repos []Repository) []LanguageStats {
 	languageBytes := make(map[string]int)
 
-	count := 0
 	for _, repo := range repos {
-		languages, err := c.Client.FetchRepoLanguages(repo)
-		if err != nil {
-			log.Printf("Could not fetch languages for repo: %s", repo.GetName())
-			continue
-		}
-
-		for language, bytes := range languages {
+		for language, bytes := range repo.Languages {
 			if _, ok := languageBytes[language]; !ok {
 				languageBytes[language] = 0 + bytes
 			} else {
 				languageBytes[language] += bytes
 			}
 		}
-
-		count++
-		fmt.Printf("Processed %d/%d repos\n", count, len(repos))
 	}
 
 	totalBytes := 0
