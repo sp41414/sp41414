@@ -20,9 +20,6 @@ func main() {
 	*/
 
 	githubToken := os.Getenv("GITHUB_TOKEN")
-	if !strings.HasPrefix(strings.TrimSpace(githubToken), "ghp_") {
-		log.Fatalf("GITHUB_TOKEN is not a valid github token, Example token: ghp_xxxxxxxxxxxx")
-	}
 	profileName := os.Getenv("GITHUB_USERNAME")
 	generatedDir := "generated"
 	svgWidth := 495
