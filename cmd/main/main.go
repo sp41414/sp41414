@@ -8,6 +8,7 @@ import (
 
 	"github.com/joho/godotenv"
 	"github.com/sp41414/sp41414/internal/config"
+	"github.com/sp41414/sp41414/internal/generator"
 	"github.com/sp41414/sp41414/internal/stats"
 )
 
@@ -63,6 +64,12 @@ func main() {
 	err = stats.WriteStats()
 	if err != nil {
 		log.Fatalf("Error generating svgs: %w", err)
+	}
+
+	fmt.Println("Generating README...")
+	err = generator.WriteReadme(generatedDir)
+	if err != nil {
+		log.Fatalf("Error generating README: %w", err)
 	}
 
 	fmt.Println("Done!")

@@ -65,6 +65,9 @@ func (g *ContributionsGenerator) Generate() error {
 	canvas.Text(padding, padding+14, "Contributions",
 		fmt.Sprintf(`font-family="'Segoe UI',sans-serif" font-size="14" font-weight="600" fill="%s"`, theme.Text))
 
+	canvas.Text(width-padding, padding+14, "last 1 year",
+		fmt.Sprintf(`font-family="'Segoe UI',sans-serif" font-size="11" fill="%s" text-anchor="end"`, theme.TextSecondary))
+
 	rowsY := padding + titleHeight + padding
 	for i, row := range rows {
 		ry := rowsY + i*rowHeight
