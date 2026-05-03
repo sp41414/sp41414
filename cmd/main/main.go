@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"strings"
 
 	"github.com/sp41414/sp41414/internal/config"
 	"github.com/sp41414/sp41414/internal/generator"
