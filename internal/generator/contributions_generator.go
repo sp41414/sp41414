@@ -55,7 +55,7 @@ func (g *ContributionsGenerator) Generate() error {
 
 	canvas := svg.New(f)
 	canvas.Startraw(fmt.Sprintf(
-		`width="%d" height="%d" viewBox="0 0 %d %d" fill="none" xmlns="http://www.w3.org/2000/svg"`,
+		`width="%d" height="%d" viewBox="0 0 %d %d" fill="none"`,
 		width, height, width, height,
 	))
 
