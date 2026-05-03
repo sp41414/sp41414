@@ -6,17 +6,18 @@ import (
 	"os"
 	"strings"
 
-	"github.com/joho/godotenv"
 	"github.com/sp41414/sp41414/internal/config"
 	"github.com/sp41414/sp41414/internal/generator"
 	"github.com/sp41414/sp41414/internal/stats"
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Error loading .env file: %w", err)
-	}
+	/*
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatalf("Error loading .env file: %w", err)
+		}
+	*/
 
 	githubToken := os.Getenv("GITHUB_TOKEN")
 	if !strings.HasPrefix(strings.TrimSpace(githubToken), "ghp_") {
@@ -55,7 +56,7 @@ func main() {
 	stats := stats.NewStats(config)
 	fmt.Println("Fetching github stats...")
 
-	err = stats.FetchStats()
+	err := stats.FetchStats()
 	if err != nil {
 		log.Fatalf("Error fetching github stats: %w", err)
 	}
