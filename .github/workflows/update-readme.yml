@@ -1,8 +1,7 @@
 name: Update README
-
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,17 +12,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
 
       - uses: actions/setup-go@v6
         with:
-          go-version-file: 'go.mod'
+          go-version-file: "go.mod"
+          cache: true
+
+      - name: Build generator
+        run: go build -ldflags="-s -w" -o generator ./cmd/main/main.go
 
       - name: Run generator
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
           THEME: dark
-        run: go run cmd/main/main.go
+        run: ./generator
 
       - name: Commit and push
         run: |
