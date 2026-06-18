@@ -19,10 +19,10 @@
 <text x="247" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >35.21%</text>
 <circle cx="262" cy="85" r="5" fill="#f1e05a" />
 <text x="275" y="89" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >JavaScript</text>
-<text x="475" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >34.77%</text>
+<text x="475" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >34.76%</text>
 <circle cx="25" cy="113" r="5" fill="#e34c26" />
 <text x="38" y="117" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >HTML</text>
-<text x="247" y="117" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >7.82%</text>
+<text x="247" y="117" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >7.81%</text>
 <circle cx="262" cy="113" r="5" fill="#00ADD8" />
 <text x="275" y="117" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >Go</text>
 <text x="475" y="117" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >6.06%</text>
