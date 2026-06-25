@@ -16,7 +16,7 @@
 <rect x="463" y="52" width="9" height="8" fill="#555555" rx="2" />
 <circle cx="25" cy="85" r="5" fill="#3178c6" />
 <text x="38" y="89" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >TypeScript</text>
-<text x="247" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >34.82%</text>
+<text x="247" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >34.83%</text>
 <circle cx="262" cy="85" r="5" fill="#f1e05a" />
 <text x="275" y="89" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >JavaScript</text>
 <text x="475" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >34.43%</text>
@@ -37,5 +37,5 @@
 <text x="247" y="173" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >2.32%</text>
 <circle cx="262" cy="169" r="5" fill="#555555" />
 <text x="275" y="173" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >C</text>
-<text x="475" y="173" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >2.16%</text>
+<text x="475" y="173" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >2.15%</text>
 </svg>
