@@ -6,6 +6,9 @@ on:
 
 permissions:
   contents: write
+concurrency:
+  group: readme-update
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -35,7 +38,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md generated/
-          git diff --cached --quiet || git commit -m "chore(automated): update readme stats"
+          git diff --cached --quiet && exit 0
+          git commit -m "chore(automated): update readme stats"
           git fetch origin main
           git rebase origin/main
-          git push
+          git push origin HEAD:main
