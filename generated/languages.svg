@@ -9,23 +9,23 @@
 <rect x="20" y="52" width="150" height="8" fill="#3178c6" rx="2" />
 <rect x="172" y="52" width="148" height="8" fill="#f1e05a" rx="2" />
 <rect x="322" y="52" width="33" height="8" fill="#e34c26" rx="2" />
-<rect x="357" y="52" width="30" height="8" fill="#555555" rx="2" />
-<rect x="389" y="52" width="25" height="8" fill="#00ADD8" rx="2" />
-<rect x="416" y="52" width="21" height="8" fill="#b07219" rx="2" />
-<rect x="439" y="52" width="21" height="8" fill="#663399" rx="2" />
-<rect x="462" y="52" width="9" height="8" fill="#a91e50" rx="2" />
+<rect x="357" y="52" width="31" height="8" fill="#555555" rx="2" />
+<rect x="390" y="52" width="25" height="8" fill="#00ADD8" rx="2" />
+<rect x="417" y="52" width="21" height="8" fill="#b07219" rx="2" />
+<rect x="440" y="52" width="21" height="8" fill="#663399" rx="2" />
+<rect x="463" y="52" width="9" height="8" fill="#a91e50" rx="2" />
 <circle cx="25" cy="85" r="5" fill="#3178c6" />
 <text x="38" y="89" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >TypeScript</text>
-<text x="247" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >32.99%</text>
+<text x="247" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >32.97%</text>
 <circle cx="262" cy="85" r="5" fill="#f1e05a" />
 <text x="275" y="89" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >JavaScript</text>
-<text x="475" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >32.61%</text>
+<text x="475" y="89" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >32.60%</text>
 <circle cx="25" cy="113" r="5" fill="#e34c26" />
 <text x="38" y="117" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >HTML</text>
 <text x="247" y="117" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >7.32%</text>
 <circle cx="262" cy="113" r="5" fill="#555555" />
 <text x="275" y="117" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >C</text>
-<text x="475" y="117" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >6.79%</text>
+<text x="475" y="117" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >6.83%</text>
 <circle cx="25" cy="141" r="5" fill="#00ADD8" />
 <text x="38" y="145" font-family="'Segoe UI',sans-serif" font-size="12" fill="#f0e6d3" >Go</text>
 <text x="247" y="145" font-family="'Segoe UI',sans-serif" font-size="11" fill="#8c7560" text-anchor="end" >5.68%</text>
